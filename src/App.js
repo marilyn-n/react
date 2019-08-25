@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import People from './components/People';
+import Ninjas from './components/Ninjas';
 import AddNinja from './components/AddNinja';
 
 export class App extends Component {
@@ -20,12 +20,19 @@ export class App extends Component {
         })
     }
 
+    deleteNinja = (id) => {
+        let ninjas = this.state.ninjas.filter(ninja => ninja.id !== id)
+        this.setState({
+            ninjas: ninjas
+        })
+    }
+
     render() {
         return ( 
             <div className = "App">
                 <h1>My first React Application</h1>
                 <p>Hello world</p>
-                <People ninjas={this.state.ninjas}/>
+                <Ninjas ninjas={this.state.ninjas} deleteNinja={this.deleteNinja} />
                 <AddNinja addNinja={this.addNinja} />
             </div>
         );
