@@ -21,17 +21,23 @@ export class AddNinja extends Component {
 
   render() {
     return (
-      <div className="ninja-form">
+      <div className="ninja-form my-5">
         <form onSubmit={this.handleSubmit}>
-          <label htmlFor="name">Name:</label>
-          <input type="text" id="name" onChange={this.handleChange} />
-          <label htmlFor="age">Age:</label>
-          <input type="text" id="age" onChange={this.handleChange} />
-          <label htmlFor="country">Country:</label>
-          <input type="text" id="country" onChange={this.handleChange} />
-          <button>Submit</button>
-        </form>
-      </div>
+            <div className="form-group">
+              <label htmlFor="name">Name:</label>
+              <input onChange={this.handleChange} type="text" className="form-control" id="name"/>
+            </div>
+            <div className="form-group">
+              <label htmlFor="age">Age:</label>
+              <input onChange={this.handleChange} type="text" className="form-control" id="age"/>
+            </div>
+            <div className="form-group">
+              <label htmlFor="country">Country:</label>
+              <input onChange={this.handleChange} type="text" className="form-control" id="country"/>
+            </div>
+            <button className="btn btn-primary">Submit</button>
+          </form>
+        </div>
     );
   }
 }

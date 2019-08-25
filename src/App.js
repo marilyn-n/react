@@ -29,9 +29,8 @@ export class App extends Component {
 
     render() {
         return ( 
-            <div className = "App">
+            <div className="App container py-5">
                 <h1>My first React Application</h1>
-                <p>Hello world</p>
                 <Ninjas ninjas={this.state.ninjas} deleteNinja={this.deleteNinja} />
                 <AddNinja addNinja={this.addNinja} />
             </div>

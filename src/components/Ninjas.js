@@ -1,19 +1,22 @@
 import React from 'react';
 
 const Ninjas = ({ninjas, deleteNinja}) => {
+
     const ninjaList = ninjas.map(ninja => {
         return ninja.age > 20 ? (
-          <div className="ninja" key={ninja.id}>
-            <div>Name: {ninja.name}</div>
-            <div>Age: {ninja.age}</div>
-            <div>Nationality: {ninja.nationality}</div>
-            <button onClick={() => {deleteNinja(ninja.id)}}>Delete ninja</button>
+          <div className="card ninja" key={ninja.id}>
+            <div className="card-body">
+                <div className="card-title">Name: {ninja.name}</div>
+                <div className="card-subtitle">Age: {ninja.age}</div>
+                <div className="card-text">Nationality: {ninja.nationality}</div>
+                <button className="btn btn-outline-danger btn-sm" onClick={() => {deleteNinja(ninja.id)}}>Delete ninja</button>
+            </div>
           </div>
         ) : null;
     })
 
     return (
-      <div className="ninja-list">
+      <div className="d-flex ninja-list justify-content-around my-5">
         { ninjaList }
       </div>
     )
