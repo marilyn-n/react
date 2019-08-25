@@ -6,7 +6,8 @@ export class App extends Component {
         ninjas: [
             { name: 'Claudia', age: 41, nationality: 'Mexican', id: 1 },
             { name: 'Benjamin', age: 66, nationality: 'Mexican', id: 2 },
-            { name: 'Noe', age: 48, nationality: 'Mexican', id: 3 }
+            { name: 'Noe', age: 48, nationality: 'Mexican', id: 3 },
+            { name: 'Cinthya', age: 15, nationality: 'Mexican', id: 4 }
         ]
     }
     render() {
