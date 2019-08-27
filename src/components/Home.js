@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component }from 'react';
 import Ninjas from './Ninjas';
 import AddNinja from './AddNinja';
 
