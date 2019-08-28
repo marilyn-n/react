@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 export class Blog extends Component {
   state = {
@@ -24,7 +25,7 @@ export class Blog extends Component {
         return (
           <div className="card m-3" key={item.id}>
             <div className="card-body">
-              <h5 className="card-title">{item.title}</h5>
+              <Link to={'/' + item.id }><h5 className="card-title">{item.title}</h5></Link>
               <p className="card-text">{item.body}</p>
             </div>
           </div>
@@ -42,6 +43,7 @@ export class Blog extends Component {
     
     return (
       <div className="container posts-list">
+        <h1 className="text-center d-block">Blog</h1>
         {postList}
       </div>
     );
