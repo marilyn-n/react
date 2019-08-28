@@ -16,4 +16,13 @@ code {
   width: 100%;
   position: fixed;
   bottom: 0;
+  left: 0;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.posts-list {
+  margin-bottom: 5rem;
 }

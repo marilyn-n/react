@@ -7,10 +7,10 @@ const Footer = (props) => {
   const redirectToHome = () => props.history.push('/home');
   
     return (
-      <div className="footer-links d-flex justify-content-around">
-        <div className="text-center">
-          <p className="text-center" onClick={ redirectToContact }>Contact us</p>
-          <p className="text-center" onClick={ redirectToHome }>Home</p>
+      <div className="footer-links bg-light pt-3">
+        <div className="text-center d-flex justify-content-around">
+          <p className="cursor-pointer" onClick={ redirectToContact }>Contact us</p>
+          <p className="cursor-pointer" onClick={ redirectToHome }>Home</p>
         </div>
       </div>
     );
