@@ -44,9 +44,11 @@ export class Blog extends Component {
     
     return (
       <div>
-        <img src={Bestbooks} className="w-100" height="250" alt="best-articles"/>
+        <div>
+            <img src={Bestbooks} className="w-100" height="250" alt="best-articles"/>
+            <h1 className="text-center my-auto mx-auto">Blog</h1>
+        </div>
         <div className="container posts-list">
-          <h1 className="text-center d-block my-4">Blog</h1>
           {postList}
         </div>
       </div>
