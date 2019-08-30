@@ -4,7 +4,7 @@ import { withRouter } from 'react-router-dom';
 
 const Footer = (props) => {
   const redirectToContact = () => props.history.push('/contact');
-  const redirectToHome = () => props.history.push('/home');
+  const redirectToHome = () => props.history.push('/');
   
     return (
       <div className="footer-links bg-light pt-3">

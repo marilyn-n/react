@@ -7,6 +7,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -25,4 +32,10 @@ code {
 
 .posts-list {
   margin-bottom: 5rem;
+}
+a {
+  text-decoration: none !important;
+}
+.article-title {
+  color: #000000;
 }

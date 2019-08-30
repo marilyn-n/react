@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import Bestbooks from '../assets/bestbooks.jpg';
 
 export class Blog extends Component {
   state = {
@@ -25,7 +26,7 @@ export class Blog extends Component {
         return (
           <div className="card m-3" key={item.id}>
             <div className="card-body">
-              <Link to={'/' + item.id }><h5 className="card-title">{item.title}</h5></Link>
+              <Link to={'/' + item.id }><h5 className="card-title article-title">{item.title}</h5></Link>
               <p className="card-text">{item.body}</p>
             </div>
           </div>
@@ -42,9 +43,12 @@ export class Blog extends Component {
     
     
     return (
-      <div className="container posts-list">
-        <h1 className="text-center d-block">Blog</h1>
-        {postList}
+      <div>
+        <img src={Bestbooks} className="w-100" height="250" alt="best-articles"/>
+        <div className="container posts-list">
+          <h1 className="text-center d-block my-4">Blog</h1>
+          {postList}
+        </div>
       </div>
     );
   }
