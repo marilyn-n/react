@@ -1,26 +1,11 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Bestbooks from '../assets/bestbooks.jpg';
+import { connect } from 'react-redux';
 
 export class Blog extends Component {
-  state = {
-    posts: [ ],
-  }
-
-  componentDidMount () {
-    fetch('https://jsonplaceholder.typicode.com/posts')
-      .then(response => response.json())
-      .then(data => {
-        this.setState({
-          posts: data.slice(0,10)
-        })
-      })      
-  }
-
-
   render() {
-    const posts = this.state.posts;
-
+    const posts = this.props.posts;
     const postList = posts.length ? 
     ( posts.map(item => {
         return (
@@ -56,4 +41,10 @@ export class Blog extends Component {
   }
 }
 
-export default Blog;
+const mapStateToProps = (state) => {
+  return {
+    posts: state.posts
+  }
+}
+
+export default connect(mapStateToProps)(Blog);
