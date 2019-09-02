@@ -21,11 +21,10 @@ export class Blog extends Component {
     ) : (
       <div className="container m-3">
         <div className="card text-center">
-            No posts yet :-(
+            No posts here
         </div>
       </div>
     )
-    
     
     return (
       <div>
